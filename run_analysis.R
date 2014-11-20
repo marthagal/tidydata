@@ -1,15 +1,14 @@
-setwd("C:/Users/E17035/Desktop/R/course-project")
-
 ## READ DATA
 
-X_train <- read.table("X_train.txt")
-X_labels <- read.table("Y_train.txt")
-X_test <- read.table("X_test.txt")
-Y_labels <- read.table("Y_test.txt")
-subject_train <- read.table("subject_train.txt")
-subject_test <- read.table("subject_test.txt")
+X_train <- read.table("./train/X_train.txt")
+Y_train <- read.table("./train/y_train.txt")
+X_test <- read.table("./test/X_test.txt")
+Y_test <- read.table("./test/y_test.txt")
+subject_train <- read.table("./train/subject_train.txt")
+subject_test <- read.table("./test/subject_test.txt")
 features <- read.table("features.txt")
 activity_labels <- read.table("activity_labels.txt")
+
 
 
 ## APPROPRIATELY LABEL THE DATA SET WITH DESCRIPTIVE VARIABLE NAMES (STEP 4)
@@ -25,25 +24,25 @@ col_header <- features_c$col_name
 # Paste column names on top of test dataset and training dataset
 colnames(X_train) <- paste(col_header)
 colnames(X_test) <- paste(col_header)
-
+ 
 # Assign new column name to subject files
 colnames(subject_train)[colnames(subject_train)=="V1"] <- "subject"
 colnames(subject_test)[colnames(subject_test)=="V1"] <- "subject"
 
 # Assign new column name to activity files
-colnames(X_labels)[colnames(X_labels)=="V1"] <- "activity"
-colnames(Y_labels)[colnames(Y_labels)=="V1"] <- "activity"
+colnames(Y_train)[colnames(Y_train)=="V1"] <- "activity"
+colnames(Y_test)[colnames(Y_test)=="V1"] <- "activity"
 
 
 
 ## MERGE DATA (STEP 1)
 
 # Merge all training data together
-train_merge <- cbind(X_train, X_labels)
+train_merge <- cbind(X_train, Y_train)
 train_merge <- cbind(train_merge, subject_train)
 
 # Merge all test data together
-test_merge <- cbind(X_test, Y_labels)
+test_merge <- cbind(X_test, Y_test)
 test_merge <- cbind(test_merge, subject_test)
 
 # Merge training data and test data together
@@ -80,9 +79,6 @@ subject_columns <- select (data, contains("subject"))
 # Merge the mean columns, std columns, and categorical datasets together
 data_set <- cbind(mean_columns, std_columns, subject_columns, activity_columns)
 data_set <- transform(data_set, activity_desc = as.factor(activity_desc))
-
-
-
 
 ## CREATE AN INDEPENDENT TIDY DATA SET WITH THE AVERAGE OF EACH VARIABLE FOR EACH SUBJECT/ACTIVITY (STEP 5)
 
