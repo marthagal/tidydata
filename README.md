@@ -9,5 +9,5 @@ Some packages (dplyr, data.table, and reshape2) must be installed by the user, b
 
 The working directory must be set to the parent folder of the unzipped data set (the features and activity_labels files should be in the working directory, while the other six files should be in the child train and test directories). 
 
-The result will be a comman-separated text file ("tidy_data.txt") in the same directory.
+The result will be a comma-separated text file ("tidy_data.txt") in the same directory.
 
