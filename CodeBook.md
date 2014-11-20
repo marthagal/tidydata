@@ -7,75 +7,45 @@ Processed Data: Features were assigned as column names to the training and test 
 
 The resulting tidy_data.txt includes 180 rows and 81 columns. Each entry indicates the average of each variable for each subject and each activity.
 
-* 'subject': An identifier of the subject who carried out the experiment, range is 1, 2, 3, ..., 30.
-* 'activity': Identify the activities performed by each person, six factors totally: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+* 'subject': An identifier of the subject who carried out the experiment, range is 1-30.
+* 'activity': Identify the activities performed by each person: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
 
 Other variables are numeric variables:
 
-prefix 't' and 'f' refer to time domain signals and frequency domain signals, respectively;
+* prefix 't' and 'f' refer to time domain signals and frequency domain signals, respectively;
+* 'acc' and 'gyro' refer to accelerometer and gyroscope, respectively;
+* '.x', '.y', and '.z' refer to 3-axial signals respectively;
+* '.mean', '.std', and '.meanfreq' refer to mean value, standard deviation, and mean frequency, respectively.
 
-'acc' and 'gyro' refer to accelerometer and gyroscope, respectively;
+The list of the numeric variables include the following. All units are the same as the original units from the raw data.
 
-'.x', '.y', and '.z' refer to 3-axial signals respectively;
-
-'.mean', '.std', and '.meanfreq' refer to mean value, standard deviation, and mean frequency, respectively.
-
-The list of the numeric variables (79 totally):
-
-'tbodyacc.mean.x'
-
-'tbodyacc.mean.y'
-
-'tbodyacc.mean.z'
-
-'tbodyacc.std.x'
-
-'tbodyacc.std.y'
-
-'tbodyacc.std.z'
-
-'tgravityacc.mean.x'
-
-'tgravityacc.mean.y'
-
-'tgravityacc.mean.z'
-
-'tgravityacc.std.x'
-
-'tgravityacc.std.y'
-
-'tgravityacc.std.z'
-
-'tbodyaccjerk.mean.X'
-
-'tbodyaccjerk.mean,y'
-
-'tbodyaccjerk.mean,z'
-
-'tbodyaccjerk.std.x'
-
+* 'tbodyacc.mean.x'
+* 'tbodyacc.mean.y'
+* 'tbodyacc.mean.z'
+* 'tbodyacc.std.x'
+* 'tbodyacc.std.y'
+* 'tbodyacc.std.z'
+* 'tgravityacc.mean.x'
+* 'tgravityacc.mean.y'
+* 'tgravityacc.mean.z'
+* 'tgravityacc.std.x'
+* 'tgravityacc.std.y'
+* 'tgravityacc.std.z'
+* 'tbodyaccjerk.mean.X'
+* 'tbodyaccjerk.mean,y'
+* 'tbodyaccjerk.mean,z'
+* 'tbodyaccjerk.std.x'
 'tbodyaccjerk.std.y'
-
 'tbodyaccjerk.std.z'
-
 'tbodygyro.mean.x'
-
 'tbodygyro.mean.y'
-
 'tbodygyro.mean.z'
-
 'tbodygyro.std.x'
-
 'tbodygyro.std.y'
-
 'tbodygyro.std.z'
-
 'tbodygyrojerk.mean.x'
-
 'tbodygyrojerk.mean.y'
-
 'tbodygyrojerk.mean.z'
-
 'tbodygyrojerk.std.x'
 
 'tbodygyrojerk.std.y'
