@@ -11,3 +11,4 @@ The working directory must be set to the parent folder of the unzipped data set 
 
 The result will be a comma-separated text file ("tidy_data.txt") in the same directory.
 
+Background: Wearable computing is a growing area in data science, with many companies looking to improve their algorithm for tracking movements. Experiments were carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, the team captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments were video-recorded to label the data manually.
